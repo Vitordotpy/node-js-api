@@ -44,9 +44,9 @@ const server = http.createServer((request, response) => {
     console.log(`Method: ${request.method} | Endpoint: ${parsedUrl.pathname}`);
 
     // Verificando a rota e o método
-    if(parsedUrl.pathname=='/users'&&request.method=='GET'){
+    if(parsedUrl.pathname=='/users/list'&&request.method=='GET'){
         listUsers(request, response);
-    }else if (parsedUrl.pathname=='/users'&& request.method=='POST'){
+    }else if (parsedUrl.pathname=='/users/create'&& request.method=='POST'){
         createUser(request, response);
     }else{
         // Endpoint não existe
