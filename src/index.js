@@ -61,4 +61,4 @@ const server = http.createServer((request, response) => {
 
 });
 
-server.listen(3000, ()=> console.log('💕 server started at http://localhost:3000')); // Iniciando servidor na porta local escolhida
+server.listen(80); // Iniciando servidor na porta local escolhida
