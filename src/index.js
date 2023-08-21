@@ -40,6 +40,10 @@ function createUser(request, response){
 // Criando servidor e adicionando as rotas e funções
 const server = http.createServer((request, response) => { 
     const parsedUrl = new URL(`http://localhost:3000${request.url}`);
+    response.setHeader('Acess-Control-Allow-Origin', '*');
+    response.setHeader('Acess-Control-Allow-Methods', 'GET, POST');
+    response.setHeader('Acess-Control-Allow-Headers', 'Content-Type, Authorization');
+
 
     console.log(`Method: ${request.method} | Endpoint: ${parsedUrl.pathname}`);
 
